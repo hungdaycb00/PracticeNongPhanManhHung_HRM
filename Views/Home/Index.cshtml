@@ -3,19 +3,20 @@
 }
 @model IQueryable<Employee>
 
+    <h2>List of Employees</h2>
 <div class="recent-book-sec">
     <div class="row">
         @foreach (var e in Model)
         {
-            <div class="col-md-3" style="border:double">
+            <div class="col-md-3 border">
                 <div class="item">
 
-                    <h3><a href="#">@e.Name</a></h3>
-                    <p>
-                        @e.Gender <br />
-                    @e.Birthday <br />
-                    @e.Address <br />
-                    @e.PhoneNumber
+                    <h3><a href="#">Name: @e.Name</a></h3>
+                    <p>ID: @e.Id <br />
+                        Gender: @e.Gender <br />
+                   Birthday: @e.Birthday <br />
+                   Address: @e.Address <br />
+                   Phone Number @e.PhoneNumber
                 </p>
             </div>
         </div>
